@@ -5,4 +5,4 @@ Disallow: /api/
 Disallow: /admin
 
 # Sitemap Location
-Sitemap: https://handpowercleaning.com/sitemap.xml
+Sitemap: https://handpowercleaningservice.com/sitemap.xml
