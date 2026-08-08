@@ -81,7 +81,7 @@ export default function Footer() {
             </p>
             <p style={{ display: 'flex', gap: '10px', marginBottom: '12px', color: '#ffffff', alignItems: 'center' }}>
               <MapPin size={28} color="#25A244" />
-              <span>Ganapathy, Coimbatore,TN</span>
+              <span>Ganapathy, Coimbatore,Tamil Nadu</span>
             </p>
           </div>
         </div>
