@@ -35,7 +35,6 @@ export default function Footer() {
               <li><a href="#about">About Us</a></li>
               <li><a href="#services">Our Services</a></li>
               <li><a href="#contact">Book Appointment</a></li>
-              <li><a href="/admin" target="_blank" style={{ color: '#94A3B8', fontSize: '0.85rem' }} title="Admin Lead Management Portal">Admin Portal</a></li>
             </ul>
           </div>
 
