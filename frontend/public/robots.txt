@@ -1,0 +1,8 @@
+# robots.txt for Hand Power Cleaning Service
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin
+
+# Sitemap Location
+Sitemap: https://handpowercleaning.com/sitemap.xml

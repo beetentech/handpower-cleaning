@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Inquiry Dashboard | Hand Power Cleaning Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-navy: #0B2545;
+      --primary-green: #25A244;
+      --bg-light: #F8FAFC;
+      --border-color: #E2E8F0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-light);
+      color: #1E293B;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: var(--primary-navy);
+      color: #ffffff;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .badge-location {
+      background-color: rgba(255,255,255,0.15);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .btn-logout {
+      background-color: #EF4444;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background-color 0.2s ease;
+    }
+    .btn-logout:hover {
+      background-color: #DC2626;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    }
+    
+    /* Login Modal Overlay */
+    .login-container {
+      max-width: 420px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+    .login-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px 32px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 12px 32px rgba(11, 37, 69, 0.12);
+      text-align: center;
+    }
+    .login-icon {
+      width: 64px;
+      height: 64px;
+      background: #EBF5ED;
+      color: var(--primary-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 2rem;
+    }
+    .login-card h2 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--primary-navy);
+      margin: 0 0 8px;
+      font-size: 1.6rem;
+    }
+    .login-card p {
+      color: #64748B;
+      font-size: 0.95rem;
+      margin: 0 0 24px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.88rem;
+      margin-bottom: 8px;
+      color: #334155;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 1rem;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .form-group input:focus {
+      border-color: var(--primary-green);
+      box-shadow: 0 0 0 3px rgba(37, 162, 68, 0.15);
+    }
+    .btn-login {
+      width: 100%;
+      background-color: var(--primary-navy);
+      color: #ffffff;
+      border: none;
+      padding: 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    .btn-login:hover {
+      background-color: #13293D;
+    }
+    .alert-error {
+      background-color: #FEE2E2;
+      color: #DC2626;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    /* Table Styles */
+    .table-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn-export {
+      background-color: var(--primary-navy);
+      color: #ffffff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-refresh {
+      background-color: var(--primary-green);
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+    th {
+      background-color: #F1F5F9;
+      color: var(--primary-navy);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+    }
+    .status-badge {
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      background-color: #E2E8F0;
+      color: #475569;
+    }
+    .status-select {
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border: 1px solid var(--border-color);
+      outline: none;
+      cursor: pointer;
+    }
+    .status-select.status-new { background-color: #EBF5ED; color: var(--primary-green); border-color: #25A244; }
+    .status-select.status-contacted { background-color: #E0F2FE; color: #0284C7; border-color: #0284C7; }
+    .status-select.status-completed { background-color: #F1F5F9; color: #64748B; border-color: #CBD5E1; }
+    .phone-link { color: var(--primary-navy); font-weight: bold; text-decoration: none; }
+    .phone-link:hover { text-decoration: underline; }
+    .whatsapp-btn {
+      background-color: #25D366;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.83rem;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+    }
+    .whatsapp-btn:hover {
+      background-color: #20BA5A;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+    }
+    td {
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <h1>
+      🧹 Hand Power Cleaning - Admin Portal
+    </h1>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <span class="badge-location">📍 Ganapathy, Coimbatore</span>
+      <button id="logoutBtn" class="btn-logout" style="display: none;" onclick="handleLogout()">🔒 Logout</button>
+    </div>
+  </header>
+
+  <!-- Login Section -->
+  <div id="loginSection" class="login-container">
+    <div class="login-card">
+      <div class="login-icon">🔐</div>
+      <h2>Admin Authentication</h2>
+      <p>Protected by HMAC-SHA256 Token Authentication.</p>
+
+      <div id="loginError" class="alert-error" style="display: none;">
+        Invalid password! Please try again.
+      </div>
+
+      <form onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label for="adminPass">Admin Password</label>
+          <input 
+            type="password" 
+            id="adminPass" 
+            placeholder="Enter password..." 
+            required 
+            autofocus 
+          />
+        </div>
+        <button type="submit" class="btn-login">Authenticate Admin</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main Dashboard Content (Hidden until authenticated) -->
+  <div id="dashboardSection" class="container" style="display: none;">
+    <!-- Stats Cards Row -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px;">
+      <div style="background: linear-gradient(135deg, #0B2545, #13293D); color: #ffffff; padding: 20px; border-radius: 14px; box-shadow: 0 4px 12px rgba(11, 37, 69, 0.1);">
+        <div style="font-size: 0.85rem; color: #94A3B8; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">Total Booking Requests</div>
+        <div id="totalBookingsCount" style="font-size: 2.2rem; font-weight: 800; margin-top: 4px; font-family: 'Outfit', sans-serif;">0</div>
+      </div>
+
+      <div style="background: #ffffff; border: 1px solid var(--border-color); padding: 20px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div style="font-size: 0.85rem; color: #64748B; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">New Leads Status</div>
+        <div id="newLeadsCount" style="font-size: 2.2rem; font-weight: 800; color: var(--primary-green); margin-top: 4px; font-family: 'Outfit', sans-serif;">0</div>
+      </div>
+
+      <div style="background: #ffffff; border: 1px solid var(--border-color); padding: 20px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div style="font-size: 0.85rem; color: #64748B; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">Top Service Category</div>
+        <div id="topServiceCategory" style="font-size: 1.05rem; font-weight: 700; color: var(--primary-navy); margin-top: 10px; word-break: break-word;">-</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="table-header">
+        <h2 style="margin: 0; font-family: 'Outfit', sans-serif; color: var(--primary-navy);">Received Booking Inquiries</h2>
+        <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+          <button class="btn-export" onclick="exportToCSV()">📥 Export Excel / CSV</button>
+          <button class="btn-refresh" onclick="loadInquiries()">🔄 Refresh Data</button>
+        </div>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Customer Name</th>
+              <th>Phone</th>
+              <th>Service</th>
+              <th>Location</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>WhatsApp Action</th>
+            </tr>
+          </thead>
+          <tbody id="inquiriesTableBody">
+            <tr>
+              <td colspan="8" style="text-align: center; color: #64748B;">Loading customer inquiries...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentInquiriesData = [];
+
+    function checkAuth() {
+      const token = sessionStorage.getItem('admin_token');
+      if (token) {
+        document.getElementById('loginSection').style.display = 'none';
+        document.getElementById('dashboardSection').style.display = 'block';
+        document.getElementById('logoutBtn').style.display = 'inline-block';
+        loadInquiries();
+      } else {
+        document.getElementById('loginSection').style.display = 'block';
+        document.getElementById('dashboardSection').style.display = 'none';
+        document.getElementById('logoutBtn').style.display = 'none';
+      }
+    }
+
+    async function handleLogin(e) {
+      e.preventDefault();
+      const inputPass = document.getElementById('adminPass').value.trim();
+      const loginError = document.getElementById('loginError');
+      loginError.style.display = 'none';
+
+      try {
+        const response = await fetch('/api/admin/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password: inputPass })
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.token) {
+          sessionStorage.setItem('admin_token', data.token);
+          checkAuth();
+        } else {
+          loginError.innerText = data.detail || 'Invalid password! Please try again.';
+          loginError.style.display = 'block';
+          document.getElementById('adminPass').value = '';
+          document.getElementById('adminPass').focus();
+        }
+      } catch (err) {
+        loginError.innerText = 'Connection error. Please try again.';
+        loginError.style.display = 'block';
+      }
+    }
+
+    function handleLogout() {
+      sessionStorage.removeItem('admin_token');
+      document.getElementById('adminPass').value = '';
+      checkAuth();
+    }
+
+    async function loadInquiries() {
+      const tbody = document.getElementById('inquiriesTableBody');
+      const token = sessionStorage.getItem('admin_token');
+
+      try {
+        const response = await fetch('/api/inquiries', {
+          headers: { 'Authorization': 'Bearer ' + (token || '') }
+        });
+
+        if (response.status === 401) {
+          handleLogout();
+          return;
+        }
+
+        const data = await response.json();
+        currentInquiriesData = data || [];
+        
+        // Update Booking Counters
+        document.getElementById('totalBookingsCount').innerText = currentInquiriesData.length;
+        document.getElementById('newLeadsCount').innerText = currentInquiriesData.filter(i => (i.status || 'New').toLowerCase() === 'new').length;
+
+        if (currentInquiriesData.length > 0) {
+          const serviceCounts = {};
+          currentInquiriesData.forEach(item => {
+            const s = item.service_type || 'General Cleaning';
+            serviceCounts[s] = (serviceCounts[s] || 0) + 1;
+          });
+          const topService = Object.keys(serviceCounts).reduce((a, b) => serviceCounts[a] > serviceCounts[b] ? a : b);
+          document.getElementById('topServiceCategory').innerText = topService;
+        } else {
+          document.getElementById('topServiceCategory').innerText = "None Yet";
+        }
+
+        if (!data || data.length === 0) {
+          tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; color: #64748B;">No inquiries received yet. Submit a test form on the website to see it here!</td></tr>`;
+          return;
+        }
+
+        tbody.innerHTML = data.map(item => {
+          const statusVal = (item.status || 'New').trim();
+          const statusClass = statusVal.toLowerCase() === 'contacted' ? 'status-contacted' : (statusVal.toLowerCase() === 'completed' ? 'status-completed' : 'status-new');
+          return `
+          <tr>
+            <td>#${item.id}</td>
+            <td><strong>${escapeHtml(item.name)}</strong></td>
+            <td><a href="tel:${escapeHtml(item.phone)}" class="phone-link">${escapeHtml(item.phone)}</a></td>
+            <td>${escapeHtml(item.service_type)}</td>
+            <td>${escapeHtml(item.location || 'Coimbatore')}</td>
+            <td>${escapeHtml(item.preferred_date || 'ASAP')}</td>
+            <td>
+              <select onchange="updateInquiryStatus(${item.id}, this.value)" class="status-select ${statusClass}">
+                <option value="New" ${statusVal.toLowerCase() === 'new' ? 'selected' : ''}>🟢 New</option>
+                <option value="Contacted" ${statusVal.toLowerCase() === 'contacted' ? 'selected' : ''}>🔵 Contacted</option>
+                <option value="Completed" ${statusVal.toLowerCase() === 'completed' ? 'selected' : ''}>✅ Completed</option>
+              </select>
+            </td>
+            <td>
+              <a href="https://wa.me/91${escapeHtml(item.phone)}?text=Hi%20${encodeURIComponent(item.name)},%20thank%20you%20for%20contacting%20Hand%20Power%20Cleaning%20Service%20in%20Coimbatore!%20We%20received%20your%20booking%20request%20for%20${encodeURIComponent(item.service_type)}." 
+                 target="_blank" onclick="updateInquiryStatus(${item.id}, 'Contacted')" class="whatsapp-btn">💬 Chat Customer</a>
+            </td>
+          </tr>
+        `}).join('');
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; color: #DC2626;">Error loading inquiries: ${err.message}</td></tr>`;
+      }
+    }
+
+    async function updateInquiryStatus(id, newStatus) {
+      const token = sessionStorage.getItem('admin_token');
+      try {
+        const response = await fetch(`/api/inquiries/${id}/status`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + (token || '')
+          },
+          body: JSON.stringify({ status: newStatus })
+        });
+        if (response.ok) {
+          loadInquiries();
+        }
+      } catch (err) {
+        console.error("Failed to update status:", err);
+      }
+    }
+
+    function exportToCSV() {
+      if (!currentInquiriesData || currentInquiriesData.length === 0) {
+        alert("No inquiry records available to export.");
+        return;
+      }
+
+      const headers = ["ID", "Customer Name", "Phone", "Email", "Service Type", "Location", "Preferred Date", "Status", "Submitted At"];
+      const rows = currentInquiriesData.map(item => [
+        item.id,
+        `"${(item.name || '').replace(/"/g, '""')}"`,
+        `"${(item.phone || '').replace(/"/g, '""')}"`,
+        `"${(item.email || '').replace(/"/g, '""')}"`,
+        `"${(item.service_type || '').replace(/"/g, '""')}"`,
+        `"${(item.location || '').replace(/"/g, '""')}"`,
+        `"${(item.preferred_date || '').replace(/"/g, '""')}"`,
+        `"${(item.status || 'New').replace(/"/g, '""')}"`,
+        `"${(item.created_at || '').replace(/"/g, '""')}"`
+      ]);
+
+      const csvContent = "\uFEFF" + [headers.join(","), ...rows.map(e => e.join(","))].join("\n");
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      const fileName = `HandPower_Leads_Backup_${new Date().toISOString().slice(0,10)}.csv`;
+      
+      link.setAttribute("href", url);
+      link.setAttribute("download", fileName);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/[&<>"']/g, match => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[match]));
+    }
+
+    // Run auth check on page load
+    checkAuth();
+  </script>
+</body>
+</html>
