@@ -5,7 +5,7 @@ export default function QuickContactBar() {
   return (
     <div className="floating-actions" aria-label="Quick Contact Actions">
       <a 
-        href="https://wa.me/917708948932?text=Hi%20Hand%20Power%20Cleaning%20Service,%20I%20would%20like%20to%20inquire%20about%20your%20cleaning%20services%20in%20Coimbatore." 
+        href="https://wa.me/919342401538?text=Hi%20Hand%20Power%20Cleaning%20Service,%20I%20would%20like%20to%20inquire%20about%20your%20cleaning%20services%20in%20Coimbatore." 
         target="_blank" 
         rel="noopener noreferrer" 
         className="action-circle action-whatsapp"
@@ -23,9 +23,9 @@ export default function QuickContactBar() {
       </a>
 
       <a 
-        href="tel:7708948932" 
+        href="tel:9342401538" 
         className="action-circle action-call"
-        title="Call 7708948932"
+        title="Call 9342401538"
         aria-label="Call Hand Power Cleaning Coimbatore"
       >
         <Phone size={24} />

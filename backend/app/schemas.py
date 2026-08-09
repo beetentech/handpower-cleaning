@@ -4,7 +4,7 @@ from datetime import datetime
 
 class InquiryCreate(BaseModel):
     name: str = Field(..., min_length=2, max_length=150, example="Ramesh Kumar")
-    phone: str = Field(..., min_length=10, max_length=15, example="7708948932")
+    phone: str = Field(..., min_length=10, max_length=15, example="9342401538")
     email: Optional[str] = Field(None, example="ramesh@gmail.com")
     service_type: str = Field(..., example="Residential Deep Cleaning")
     location: Optional[str] = Field(None, example="Gandhipuram, Coimbatore")

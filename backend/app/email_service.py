@@ -116,7 +116,7 @@ def send_booking_email_notification(booking_data: dict):
                     </div>
 
                     <p>Our team will call you at <strong>{booking_data.get('phone')}</strong> shortly to confirm your service slot.</p>
-                    <p>Need urgent assistance? Call our direct helpline: <a href="tel:7708948932" style="color: #25A244; font-weight: bold;">+91 7708948932</a></p>
+                    <p>Need urgent assistance? Call our direct helpline: <a href="tel:9342401538" style="color: #25A244; font-weight: bold;">+91 9342401538</a></p>
                 </div>
             </body>
             </html>

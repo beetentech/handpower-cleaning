@@ -86,9 +86,9 @@ export default function AboutUs() {
           }}>
             <div>
               <div style={{ fontSize: '0.85rem', color: '#94A3B8' }}>Direct Service Helpline</div>
-              <div style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>+91 7708948932</div>
+              <div style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>+91 9342401538</div>
             </div>
-            <a href="tel:7708948932" className="btn-primary" style={{ padding: '10px 20px' }} title="Call Hand Power Cleaning Coimbatore">
+            <a href="tel:9342401538" className="btn-primary" style={{ padding: '10px 20px' }} title="Call Hand Power Cleaning Coimbatore">
               <Phone size={16} /> Call Now
             </a>
           </div>

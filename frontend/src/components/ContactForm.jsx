@@ -67,7 +67,7 @@ export default function ContactForm({ selectedService }) {
 
   const handleWhatsAppSend = () => {
     const text = `Hi Hand Power Cleaning Service! I would like to book a service.%0A%0A*Name:* ${formData.name || 'Not provided'}%0A*Phone:* ${formData.phone || 'Not provided'}%0A*Service:* ${formData.service_type}%0A*Location:* ${formData.location || 'Coimbatore'}%0A*Date:* ${formData.preferred_date || 'Asap'}%0A*Message:* ${formData.message || 'Need quote'}`;
-    window.open(`https://wa.me/917708948932?text=${text}`, '_blank');
+    window.open(`https://wa.me/919342401538?text=${text}`, '_blank');
   };
 
   return (
@@ -100,7 +100,7 @@ export default function ContactForm({ selectedService }) {
                 </div>
                 <div className="info-details">
                   <h5>Call / WhatsApp</h5>
-                  <a href="tel:7708948932" title="Call Hand Power Cleaning Coimbatore">+91 7708948932</a>
+                  <a href="tel:9342401538" title="Call Hand Power Cleaning Coimbatore">+91 9342401538</a>
                 </div>
               </div>
 
@@ -189,7 +189,7 @@ export default function ContactForm({ selectedService }) {
                 <CheckCircle2 size={24} />
                 <div>
                   <strong>Thank You! Your booking request has been received.</strong>
-                  <p style={{ fontSize: '0.88rem', margin: 0 }}>Our team will call you at 7708948932 shortly to confirm the appointment.</p>
+                  <p style={{ fontSize: '0.88rem', margin: 0 }}>Our team will call you at 9342401538 shortly to confirm the appointment.</p>
                 </div>
               </div>
             )}
@@ -233,7 +233,7 @@ export default function ContactForm({ selectedService }) {
                     id="phone"
                     name="phone"
                     required
-                    placeholder="e.g. 7708948932"
+                    placeholder="e.g. 9342401538"
                     value={formData.phone}
                     onChange={handleChange}
                     autoComplete="tel"

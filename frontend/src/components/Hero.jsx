@@ -18,9 +18,9 @@ export default function Hero({ onBookClick }) {
               <ArrowRight size={18} />
             </button>
 
-            <a href="tel:7708948932" className="btn-outline" title="Call Hand Power Cleaning Coimbatore">
+            <a href="tel:9342401538" className="btn-outline" title="Call Hand Power Cleaning Coimbatore">
               <PhoneCall size={18} />
-              <span>Call 7708948932</span>
+              <span>Call 9342401538</span>
             </a>
           </div>
         </div>

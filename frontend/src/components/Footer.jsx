@@ -54,11 +54,11 @@ export default function Footer() {
             <p style={{ display: 'flex', gap: '10px', marginBottom: '12px', alignItems: 'center' }}>
               <Phone size={28} color="#25A244" />
               <a 
-                href="tel:7708948932" 
+                href="tel:9342401538" 
                 style={{ color: '#ffffff', fontWeight: 'bold', textDecoration: 'none', cursor: 'pointer' }} 
                 title="Call Hand Power Cleaning Service"
               >
-                7708948932
+                9342401538
               </a>
             </p>
             <p style={{ display: 'flex', gap: '10px', marginBottom: '12px', alignItems: 'center' }}>

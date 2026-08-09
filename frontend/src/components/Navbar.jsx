@@ -33,9 +33,9 @@ export default function Navbar({ onBookClick }) {
 
         {/* Call CTA & Book Button */}
         <div className="nav-cta-box">
-          <a href="tel:7708948932" className="phone-pill" title="Call Hand Power Cleaning Service Coimbatore">
+          <a href="tel:9342401538" className="phone-pill" title="Call Hand Power Cleaning Service Coimbatore">
             <Phone size={18} className="text-green" />
-            <span>7708948932</span>
+            <span>9342401538</span>
           </a>
 
           <button onClick={onBookClick} className="btn-primary" aria-label="Book Cleaning Service">
@@ -71,7 +71,7 @@ export default function Navbar({ onBookClick }) {
           <a href="#about" onClick={() => setMobileMenuOpen(false)}>About Us</a>
           <a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a>
           <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-          <a href="tel:7708948932" style={{ fontWeight: 'bold', color: '#25A244' }}>📞 Call 7708948932</a>
+          <a href="tel:9342401538" style={{ fontWeight: 'bold', color: '#25A244' }}>📞 Call 9342401538</a>
         </div>
       )}
     </header>
