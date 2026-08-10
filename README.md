@@ -1,4 +1,4 @@
-# 🧹 Hand Power Cleaning Service - Official Website & Admin Portal
+#  HandPower Cleaning Service - Official Website & Admin Portal
 
 Official business website and backend inquiry management system for **Hand Power Cleaning Service**, located in **Ganapathy, Coimbatore, Tamil Nadu**.
 

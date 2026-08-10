@@ -34,7 +34,7 @@ def send_booking_email_notification(booking_data: dict):
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #1E293B; margin: 0; padding: 20px; background-color: #F8FAFC;">
             <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; border: 1px solid #E2E8F0; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
                 <div style="border-bottom: 2px solid #25A244; padding-bottom: 12px; margin-bottom: 20px;">
-                    <h2 style="color: #0B2545; margin: 0;">🧹 Hand Power Cleaning Service</h2>
+                    <h2 style="color: #0B2545; margin: 0;">HandPower Cleaning Service</h2>
                     <p style="color: #25A244; font-weight: bold; margin: 4px 0 0 0;">New Appointment Booking Received</p>
                 </div>
 
