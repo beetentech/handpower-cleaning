@@ -10,8 +10,7 @@ const fallbackServices = [
     short_description: "Complete professional cleaning solutions for corporate offices, retail stores, and commercial spaces.",
     full_description: "Desk dusting, floor single-disc scrubbing, restroom sanitization, and glass partition cleaning.",
     image_url: "/images/service_commercial.png",
-    image_alt: "Commercial and office cleaning services in Coimbatore with professional glass partition cleaning and floor vacuuming",
-    price_starting: "₹4,999"
+    image_alt: "Commercial and office cleaning services in Coimbatore with professional glass partition cleaning and floor vacuuming"
   },
   {
     id: 2,
@@ -19,8 +18,7 @@ const fallbackServices = [
     short_description: "Comprehensive top-to-bottom deep sanitization & cleaning for apartments, villas, and independent homes.",
     full_description: "Includes floor scrubbing, kitchen degreasing, bathroom stain removal, window glass wiping, and balcony wash.",
     image_url: "/images/service_residential.jpg",
-    image_alt: "House full deep cleaning in Coimbatore with kitchen and living room floor scrubbing and sanitization",
-    price_starting: "₹2,999"
+    image_alt: "House full deep cleaning in Coimbatore with kitchen and living room floor scrubbing and sanitization"
   },
   {
     id: 3,
@@ -28,8 +26,7 @@ const fallbackServices = [
     short_description: "Specialized hard-water stain removal, tile descaling, and high-hygiene disinfection for restrooms & toilets.",
     full_description: "Tap descaling, wall tile scrubbing, toilet bowl stain removal, and floor sanitization.",
     image_url: "/images/service_restroom.jpg",
-    image_alt: "Restroom and toilet deep cleaning in Coimbatore with tile descaling, sink polishing, and stain removal",
-    price_starting: "₹1,499"
+    image_alt: "Restroom and toilet deep cleaning in Coimbatore with tile descaling, sink polishing, and stain removal"
   },
   {
     id: 4,
@@ -37,8 +34,7 @@ const fallbackServices = [
     short_description: "Hygienic multi-stage high-pressure jet cleaning & sludge removal for underground sumps and overhead water tanks.",
     full_description: "Dewatering, heavy sludge vacuuming, high-pressure jet wash, anti-bacterial spray treatment.",
     image_url: "/images/service_watertank.png",
-    image_alt: "Water tank and sump high pressure jet cleaning service in Coimbatore with multi-stage disinfection",
-    price_starting: "₹999"
+    image_alt: "Water tank and sump high pressure jet cleaning service in Coimbatore with multi-stage disinfection"
   },
   {
     id: 5,
@@ -46,8 +42,7 @@ const fallbackServices = [
     short_description: "Heavy-duty deep sludge removal and high-suction slurry vacuuming for large domestic & commercial sumps.",
     full_description: "Industrial vacuum extraction, chemical wall scrubbing, UV anti-bacterial disinfection.",
     image_url: "/images/service_sump.jpg",
-    image_alt: "Underground water sump deep cleaning with vacuum slurry extraction and pressure jet in Coimbatore",
-    price_starting: "₹1,199"
+    image_alt: "Underground water sump deep cleaning with vacuum slurry extraction and pressure jet in Coimbatore"
   },
   {
     id: 6,
@@ -55,8 +50,7 @@ const fallbackServices = [
     short_description: "Deep extraction foam shampooing to eliminate dust mites, stubborn stains, and odors from fabric sofas & mattresses.",
     full_description: "Dry vacuuming, chemical foam injection, dual technician extraction machine cleaning.",
     image_url: "/images/service_mattress.jpg",
-    image_alt: "Sofa carpet and mattress shampooing service in Coimbatore using deep foam extraction machine",
-    price_starting: "₹799"
+    image_alt: "Sofa carpet and mattress shampooing service in Coimbatore using deep foam extraction machine"
   },
   {
     id: 7,
@@ -64,8 +58,7 @@ const fallbackServices = [
     short_description: "Complete anti-termite, cockroach, bedbug management and chemical fumigation mist fogging services.",
     full_description: "Odorless herbal spray, thermal fogging, gel bait application, and full indoor disinfection.",
     image_url: "/images/service_pestcontrol.jpg",
-    image_alt: "Pest control and chemical sanitization mist fogging in Coimbatore with protective equipment",
-    price_starting: "₹1,299"
+    image_alt: "Pest control and chemical sanitization mist fogging in Coimbatore with protective equipment"
   },
   {
     id: 8,
@@ -73,8 +66,7 @@ const fallbackServices = [
     short_description: "Streak-free crystal clear glass squeegee washing for tall windows, sliding doors, and architectural glass facades.",
     full_description: "Purified water wash, mineral stain removal, rubber squeegee wiping, high-reach glass cleaning.",
     image_url: "/images/service_glass.jpg",
-    image_alt: "Glass and window facade cleaning in Coimbatore with streak-free squeegee washing",
-    price_starting: "₹899"
+    image_alt: "Glass and window facade cleaning in Coimbatore with streak-free squeegee washing"
   },
   {
     id: 9,
@@ -82,8 +74,7 @@ const fallbackServices = [
     short_description: "Heavy-duty single-disc motorized floor scrubbing, conference table sanitization, and janitorial contract cleaning.",
     full_description: "Commercial floor buffing, table disinfection, janitor cart sanitation, daily office maintenance.",
     image_url: "/images/service_office_scrub.jpg",
-    image_alt: "Workplace and commercial single disc floor machine scrubbing in Coimbatore tech parks and offices",
-    price_starting: "₹3,499"
+    image_alt: "Workplace and commercial single disc floor machine scrubbing in Coimbatore tech parks and offices"
   },
   {
     id: 10,
@@ -91,8 +82,7 @@ const fallbackServices = [
     short_description: "Dedicated multi-technician full squad cleaning for large luxury villas, move-in move-out, and pre-occupancy homes.",
     full_description: "Full squad team with vacuum machines, upholstery cleaners, window washers, and kitchen specialists.",
     image_url: "/images/service_villateam.jpg",
-    image_alt: "Villa and luxury apartment full crew move-in deep cleaning squad in Coimbatore",
-    price_starting: "₹6,999"
+    image_alt: "Villa and luxury apartment full crew move-in deep cleaning squad in Coimbatore"
   }
 ];
 
