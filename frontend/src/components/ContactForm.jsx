@@ -32,7 +32,7 @@ export default function ContactForm({ selectedService }) {
 
     try {
       // The backend stores the booking and sends the email notification.
-      await axios.post('https://handpower-cleaning.onrender.com/api/contact', formData, {
+      await axios.post('https://handpower-cleaning-r588.onrender.com/api/contact', formData, {
         headers: { 'Content-Type': 'application/json' },
         timeout: 60000
       });
