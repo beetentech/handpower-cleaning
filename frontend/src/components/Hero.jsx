@@ -10,6 +10,7 @@ import {
   Sofa,
   Bug,
   Waves,
+  BugIcon,
   Hammer
 } from 'lucide-react';
 
@@ -20,7 +21,7 @@ export default function Hero({ onBookClick }) {
     { icon: <Bath size={16} />, label: 'Bathroom Cleaning' },
     { icon: <Sofa size={16} />, label: 'Sofa & Carpet' },
     { icon: <Waves size={16} />, label: 'Water Tank' },
-    { icon: <bug size={16} />, label: 'Pest Control & Sanitization Fogging' }
+    { icon: <BugIcon size={16} />, label: 'Pest Control & Sanitization Fogging' }
   ];
 
   return (

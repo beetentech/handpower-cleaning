@@ -85,8 +85,8 @@ export default function AboutUs() {
             justifyContent: 'space-between'
           }}>
             <div>
-              <div style={{ fontSize: '0.85rem', color: '#94A3B8' }}>Direct Service Helpline</div>
-              <div style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>+91 9342401538</div>
+              <div style={{ fontSize: '0.75rem', color: '#07fd34' }}>Direct-Service</div>
+              <div style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>9342401538</div>
             </div>
             <a href="tel:9342401538" className="btn-primary" style={{ padding: '10px 20px' }} title="Call Hand Power Cleaning Coimbatore">
               <Phone size={16} /> Call Now

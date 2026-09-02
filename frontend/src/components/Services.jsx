@@ -9,7 +9,7 @@ const fallbackServices = [
     title: "Commercial & Office Cleaning",
     short_description: "Complete professional cleaning solutions for corporate offices, retail stores, and commercial spaces.",
     full_description: "Desk dusting, floor single-disc scrubbing, restroom sanitization, and glass partition cleaning.",
-    image_url: "/images/service_commercial.png",
+    image_url: "/images/Residential and commercial cleaning.jpeg",
     image_alt: "Commercial and office cleaning services in Coimbatore with professional glass partition cleaning and floor vacuuming"
   },
   {
@@ -17,7 +17,7 @@ const fallbackServices = [
     title: "House Full Deep Cleaning",
     short_description: "Comprehensive top-to-bottom deep sanitization & cleaning for apartments, villas, and independent homes.",
     full_description: "Includes floor scrubbing, kitchen degreasing, bathroom stain removal, window glass wiping, and balcony wash.",
-    image_url: "/images/service_residential.jpg",
+    image_url: "/images/House cleaning.jpeg",
     image_alt: "House full deep cleaning in Coimbatore with kitchen and living room floor scrubbing and sanitization"
   },
   {
@@ -25,7 +25,7 @@ const fallbackServices = [
     title: "Restroom & Toilet Deep Cleaning",
     short_description: "Specialized hard-water stain removal, tile descaling, and high-hygiene disinfection for restrooms & toilets.",
     full_description: "Tap descaling, wall tile scrubbing, toilet bowl stain removal, and floor sanitization.",
-    image_url: "/images/service_restroom.jpg",
+    image_url: "/images/restroom and toilet.jpeg",
     image_alt: "Restroom and toilet deep cleaning in Coimbatore with tile descaling, sink polishing, and stain removal"
   },
   {
@@ -33,7 +33,7 @@ const fallbackServices = [
     title: "Water Tank & Sump Cleaning",
     short_description: "Hygienic multi-stage high-pressure jet cleaning & sludge removal for underground sumps and overhead water tanks.",
     full_description: "Dewatering, heavy sludge vacuuming, high-pressure jet wash, anti-bacterial spray treatment.",
-    image_url: "/images/service_watertank.png",
+    image_url: "/images/watertank.jpeg",
     image_alt: "Water tank and sump high pressure jet cleaning service in Coimbatore with multi-stage disinfection"
   },
   {
@@ -41,7 +41,7 @@ const fallbackServices = [
     title: "Underground Sump Cleaning",
     short_description: "Heavy-duty deep sludge removal and high-suction slurry vacuuming for large domestic & commercial sumps.",
     full_description: "Industrial vacuum extraction, chemical wall scrubbing, UV anti-bacterial disinfection.",
-    image_url: "/images/service_sump.jpg",
+    image_url: "/images/sump.jpeg",
     image_alt: "Underground water sump deep cleaning with vacuum slurry extraction and pressure jet in Coimbatore"
   },
   {
@@ -49,7 +49,7 @@ const fallbackServices = [
     title: "Sofa, Carpet & Mattress Shampooing",
     short_description: "Deep extraction foam shampooing to eliminate dust mites, stubborn stains, and odors from fabric sofas & mattresses.",
     full_description: "Dry vacuuming, chemical foam injection, dual technician extraction machine cleaning.",
-    image_url: "/images/service_mattress.jpg",
+    image_url: "/images/sofa.jpeg",
     image_alt: "Sofa carpet and mattress shampooing service in Coimbatore using deep foam extraction machine"
   },
   {
@@ -57,7 +57,7 @@ const fallbackServices = [
     title: "Pest Control & Sanitization Fogging",
     short_description: "Complete anti-termite, cockroach, bedbug management and chemical fumigation mist fogging services.",
     full_description: "Odorless herbal spray, thermal fogging, gel bait application, and full indoor disinfection.",
-    image_url: "/images/service_pestcontrol.jpg",
+    image_url: "/images/pest control.jpeg",
     image_alt: "Pest control and chemical sanitization mist fogging in Coimbatore with protective equipment"
   },
   {
@@ -65,7 +65,7 @@ const fallbackServices = [
     title: "Glass & Window Facade Cleaning",
     short_description: "Streak-free crystal clear glass squeegee washing for tall windows, sliding doors, and architectural glass facades.",
     full_description: "Purified water wash, mineral stain removal, rubber squeegee wiping, high-reach glass cleaning.",
-    image_url: "/images/service_glass.jpg",
+    image_url: "/images/glass.jpeg",
     image_alt: "Glass and window facade cleaning in Coimbatore with streak-free squeegee washing"
   },
   {
@@ -73,16 +73,16 @@ const fallbackServices = [
     title: "Workplace & Floor Machine Scrubbing",
     short_description: "Heavy-duty single-disc motorized floor scrubbing, conference table sanitization, and janitorial contract cleaning.",
     full_description: "Commercial floor buffing, table disinfection, janitor cart sanitation, daily office maintenance.",
-    image_url: "/images/service_office_scrub.jpg",
+    image_url: "/images/office.jpeg",
     image_alt: "Workplace and commercial single disc floor machine scrubbing in Coimbatore tech parks and offices"
   },
   {
     id: 10,
-    title: "Villa & Multi-Room Crew Deep Cleaning",
-    short_description: "Dedicated multi-technician full squad cleaning for large luxury villas, move-in move-out, and pre-occupancy homes.",
-    full_description: "Full squad team with vacuum machines, upholstery cleaners, window washers, and kitchen specialists.",
-    image_url: "/images/service_villateam.jpg",
-    image_alt: "Villa and luxury apartment full crew move-in deep cleaning squad in Coimbatore"
+    title: "Commercial Daily Cleaning",
+    short_description: "Reliable daily cleaning services for offices, shops, showrooms, clinics, and other commercial spaces to maintain a clean and professional environment.",
+    full_description: "Our commercial daily cleaning service covers floor cleaning, dusting, workstations, washrooms, common areas, glass surfaces, and waste removal to keep your business space clean, hygienic, and ready every day.",
+    image_url: "/images/commercial daily.jpeg",
+    image_alt: "Professional commercial daily cleaning service for offices shops and business spaces in Coimbatore."
   }
 ];
 
