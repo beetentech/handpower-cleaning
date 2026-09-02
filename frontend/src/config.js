@@ -1,6 +1,17 @@
 // Backend API base URL.
-// - In local dev, leave VITE_API_URL unset and Vite's proxy (see vite.config.js)
-//   forwards /api requests to http://localhost:8000 automatically.
-// - In production (Namecheap), set VITE_API_URL in a .env.production file to your
-//   live Render backend URL, e.g. https://handpower-backend.onrender.com/api
-export const API_URL = import.meta.env.VITE_API_URL || '/api';
+//
+// Local development:
+// Vite proxy forwards /api requests to http://localhost:8000.
+//
+// Production:
+// Uses VITE_API_URL when configured. Otherwise, it directly uses
+// the deployed Render backend URL.
+
+const configuredApiUrl = import.meta.env.VITE_API_URL?.trim();
+
+export const API_URL = (
+  configuredApiUrl ||
+  (import.meta.env.DEV
+    ? '/api'
+    : 'https://handpower-cleaning.onrender.com/api')
+).replace(/\/$/, '');

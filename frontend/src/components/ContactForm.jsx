@@ -32,8 +32,12 @@ export default function ContactForm({ selectedService }) {
     setStatus({ loading: true, success: false, error: '' });
 
     try {
-      // 1. Post to Python FastAPI backend (stores lead in Database & Admin Panel)
-      axios.post(`${API_URL}/contact`, formData).catch(e => console.log('Local API status', e));
+      // Save first. Never show success or send the notification unless the
+      // booking has actually been accepted by the backend/database.
+      await axios.post(`${API_URL}/contact`, formData, {
+        headers: { 'Content-Type': 'application/json' },
+        timeout: 30000
+      });
 
       // 2. Dispatch live instant email directly to handpowercleaningservice@gmail.com
       await axios.post('https://formsubmit.co/ajax/handpowercleaningservice@gmail.com', {
@@ -60,8 +64,13 @@ export default function ContactForm({ selectedService }) {
         message: ''
       });
     } catch (err) {
-      console.warn("Email service dispatch:", err);
-      setStatus({ loading: false, success: true, error: '' });
+      console.error('Booking submission failed:', err);
+      const apiMessage = err.response?.data?.detail;
+      setStatus({
+        loading: false,
+        success: false,
+        error: apiMessage || 'Booking could not be saved. Please try again or contact us on WhatsApp.'
+      });
     }
   };
 
