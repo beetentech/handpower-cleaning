@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Send, CheckCircle2, AlertCircle, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import axios from 'axios';
-import { API_URL } from '../config';
 
 export default function ContactForm({ selectedService }) {
   const [formData, setFormData] = useState({
@@ -32,25 +31,10 @@ export default function ContactForm({ selectedService }) {
     setStatus({ loading: true, success: false, error: '' });
 
     try {
-      // Save first. Never show success or send the notification unless the
-      // booking has actually been accepted by the backend/database.
-      await axios.post(`${API_URL}/contact`, formData, {
+      // The backend stores the booking and sends the email notification.
+      await axios.post('https://handpower-cleaning.onrender.com/api/contact', formData, {
         headers: { 'Content-Type': 'application/json' },
-        timeout: 30000
-      });
-
-      // 2. Dispatch live instant email directly to handpowercleaningservice@gmail.com
-      await axios.post('https://formsubmit.co/ajax/handpowercleaningservice@gmail.com', {
-        _subject: `🔔 New Cleaning Appointment Booking: ${formData.name} (${formData.service_type})`,
-        _template: 'table',
-        _captcha: 'false',
-        Name: formData.name,
-        Phone: formData.phone,
-        Email: formData.email || 'Not provided',
-        Service: formData.service_type,
-        Location: formData.location || 'Coimbatore',
-        Preferred_Date: formData.preferred_date || 'ASAP',
-        Customer_Message: formData.message || 'No additional notes'
+        timeout: 60000
       });
 
       setStatus({ loading: false, success: true, error: '' });
