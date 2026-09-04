@@ -6,7 +6,7 @@ import { API_URL } from '../config';
 const fallbackServices = [
   {
     id: 1,
-    title: "Commercial & Office Cleaning",
+    title: "commercial & Residential cleaning",
     short_description: "Complete professional cleaning solutions for corporate offices, retail stores, and commercial spaces.",
     full_description: "Desk dusting, floor single-disc scrubbing, restroom sanitization, and glass partition cleaning.",
     image_url: "/images/Residential and commercial cleaning1.jpeg",
@@ -30,7 +30,7 @@ const fallbackServices = [
   },
   {
     id: 4,
-    title: "Water Tank & Sump Cleaning",
+    title: "WaterTank Cleaning",
     short_description: "Hygienic multi-stage high-pressure jet cleaning & sludge removal for underground sumps and overhead water tanks.",
     full_description: "Dewatering, heavy sludge vacuuming, high-pressure jet wash, anti-bacterial spray treatment.",
     image_url: "/images/watertank1.jpeg",
@@ -38,7 +38,7 @@ const fallbackServices = [
   },
   {
     id: 5,
-    title: "Underground Sump Cleaning",
+    title: "Sump Cleaning",
     short_description: "Heavy-duty deep sludge removal and high-suction slurry vacuuming for large domestic & commercial sumps.",
     full_description: "Industrial vacuum extraction, chemical wall scrubbing, UV anti-bacterial disinfection.",
     image_url: "/images/sump1.jpeg",
@@ -46,7 +46,7 @@ const fallbackServices = [
   },
   {
     id: 6,
-    title: "Sofa, Carpet & Mattress Shampooing",
+    title: "Sofa & Mattress Washing",
     short_description: "Deep extraction foam shampooing to eliminate dust mites, stubborn stains, and odors from fabric sofas & mattresses.",
     full_description: "Dry vacuuming, chemical foam injection, dual technician extraction machine cleaning.",
     image_url: "/images/sofa1.jpeg",
@@ -54,7 +54,7 @@ const fallbackServices = [
   },
   {
     id: 7,
-    title: "Pest Control & Sanitization Fogging",
+    title: "Pest Control",
     short_description: "Complete anti-termite, cockroach, bedbug management and chemical fumigation mist fogging services.",
     full_description: "Odorless herbal spray, thermal fogging, gel bait application, and full indoor disinfection.",
     image_url: "/images/pest control1.jpeg",
@@ -62,7 +62,7 @@ const fallbackServices = [
   },
   {
     id: 8,
-    title: "Glass & Window Facade Cleaning",
+    title: "Glass Cleaning",
     short_description: "Streak-free crystal clear glass squeegee washing for tall windows, sliding doors, and architectural glass facades.",
     full_description: "Purified water wash, mineral stain removal, rubber squeegee wiping, high-reach glass cleaning.",
     image_url: "/images/glass1.jpeg",
@@ -70,7 +70,7 @@ const fallbackServices = [
   },
   {
     id: 9,
-    title: "Workplace & Floor Machine Scrubbing",
+    title: "Office & Workplace Cleaning ",
     short_description: "Heavy-duty single-disc motorized floor scrubbing, conference table sanitization, and janitorial contract cleaning.",
     full_description: "Commercial floor buffing, table disinfection, janitor cart sanitation, daily office maintenance.",
     image_url: "/images/office1.jpeg",
